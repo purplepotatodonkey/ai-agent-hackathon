@@ -120,16 +120,26 @@ if __name__ == "__main__":
             print(f"Error during transcription: {str(e)}")
             return None
 
-    # Example usage
-
     file_path = "./input.mp3"
+
+    input("Press enter to ask your question...")
+
+    import sounddevice as sd
+    from scipy.io.wavfile import write
+
+    fs = 44100  # Sample rate
+    seconds = 5  # Duration of recording
+
+    myrecording = sd.rec(int(seconds * fs), samplerate=fs, channels=1)
+    sd.wait()  # Wait until recording is finished
+    write(file_path, fs, myrecording)  # Save as WAV file
 
     # Optional: specify language
     transcription = transcribe_audio(file_path, OPENAI_API_KEY, language="en")
 
     if transcription:
         print("Transcription:", transcription)
-    rag_response = agent.chat(message="Is it illegal for me to swim in the pool 5 minutes after I eat food?")
+    rag_response = agent.chat(message=transcription)
     print(str(rag_response))
 
     # Text to speech
