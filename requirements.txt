@@ -13,5 +13,7 @@ python-dotenv
 
 # for image/audio processing
 sounddevice
+soundfile
+numpy
 scipy
 pydub

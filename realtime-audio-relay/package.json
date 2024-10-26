@@ -1,0 +1,19 @@
+{
+  "name": "realtime-audio-relay",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "@openai/realtime-api-beta": "github:openai/openai-realtime-api-beta",
+    "ws": "^8.18.0",
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ws": "^8.18.0"
+  }
+}
