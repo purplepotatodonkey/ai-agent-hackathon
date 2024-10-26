@@ -124,12 +124,12 @@ if __name__ == "__main__":
 
     file_path = "./input.mp3"
 
-    # Optional: specify language
     transcription = transcribe_audio(file_path, OPENAI_API_KEY, language="en")
 
     if transcription:
         print("Transcription:", transcription)
-    rag_response = agent.chat(message="Is it illegal for me to swim in the pool 5 minutes after I eat food?")
+
+    rag_response = agent.chat(message=transcription)
     print(str(rag_response))
 
     # Text to speech

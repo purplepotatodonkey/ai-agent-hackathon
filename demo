@@ -1,0 +1,4 @@
+#!/bin/bash
+
+./venv/bin/python3 legalease.py
+a output.wav
