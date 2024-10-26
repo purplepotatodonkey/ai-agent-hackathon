@@ -25,3 +25,8 @@ pip install -r requirements.txt
 ```
 
 4. now select ur python kernel from your venv
+
+5. set up ur .env file. do something like this
+```
+OPENAI_API_KEY=paste_ur_api_key_here
+```
